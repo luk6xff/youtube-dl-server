@@ -1,10 +1,6 @@
-![Docker Stars Shield](https://img.shields.io/docker/stars/kmb32123/youtube-dl-server.svg?style=flat-square)
-![Docker Pulls Shield](https://img.shields.io/docker/pulls/kmb32123/youtube-dl-server.svg?style=flat-square)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/manbearwiz/youtube-dl-server/master/LICENSE)
-
 # youtube-dl-server
 
-Very spartan Web and REST interface for downloading youtube videos onto a server. [`bottle`](https://github.com/bottlepy/bottle) + [`youtube-dl`](https://github.com/rg3/youtube-dl).
+Very spartan Web and REST interface for downloading youtube music/videos. [`bottle`](https://github.com/bottlepy/bottle) + [`youtube-dl`](https://github.com/rg3/youtube-dl).
 
 ![screenshot][1]
 
@@ -33,7 +29,12 @@ This is an example service definition that could be put in `docker-compose.yml`.
 
 ### Python
 
-If you have python ^3.3.0 installed in your PATH you can simply run like this, providing optional environment variable overrides inline.
+```shell
+cd /path/to/youtube-dl-server
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 ```shell
 sudo YDL_SERVER_PORT=8123 python3 -u ./youtube-dl-server.py
